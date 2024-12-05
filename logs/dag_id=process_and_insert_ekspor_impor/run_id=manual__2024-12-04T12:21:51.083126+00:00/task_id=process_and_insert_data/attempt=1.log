@@ -1,0 +1,27 @@
+[2024-12-04T12:21:52.561+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-04T12:21:52.571+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_and_insert_ekspor_impor.process_and_insert_data manual__2024-12-04T12:21:51.083126+00:00 [queued]>
+[2024-12-04T12:21:52.576+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_and_insert_ekspor_impor.process_and_insert_data manual__2024-12-04T12:21:51.083126+00:00 [queued]>
+[2024-12-04T12:21:52.576+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-04T12:21:52.583+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_and_insert_data> on 2024-12-04 12:21:51.083126+00:00
+[2024-12-04T12:21:52.588+0000] {standard_task_runner.py:72} INFO - Started process 88 to run task
+[2024-12-04T12:21:52.591+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'process_and_insert_ekspor_impor', 'process_and_insert_data', 'manual__2024-12-04T12:21:51.083126+00:00', '--job-id', '166', '--raw', '--subdir', 'DAGS_FOLDER/process_and_insert_ekspor_impor.py', '--cfg-path', '/tmp/tmpuq14vz5j']
+[2024-12-04T12:21:52.592+0000] {standard_task_runner.py:105} INFO - Job 166: Subtask process_and_insert_data
+[2024-12-04T12:21:52.621+0000] {task_command.py:467} INFO - Running <TaskInstance: process_and_insert_ekspor_impor.process_and_insert_data manual__2024-12-04T12:21:51.083126+00:00 [running]> on host 5ffa3ab6f14b
+[2024-12-04T12:21:52.676+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='process_and_insert_ekspor_impor' AIRFLOW_CTX_TASK_ID='process_and_insert_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-04T12:21:51.083126+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-04T12:21:51.083126+00:00'
+[2024-12-04T12:21:52.677+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-04T12:21:52.677+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-04T12:21:52.677+0000] {logging_mixin.py:190} INFO - Current task name:process_and_insert_data state:running start_date:2024-12-04 12:21:52.571881+00:00
+[2024-12-04T12:21:52.677+0000] {logging_mixin.py:190} INFO - Dag name:process_and_insert_ekspor_impor and current dag run status:running
+[2024-12-04T12:21:52.677+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-04T12:21:52.773+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2024-12-04T12:21:52.779+0000] {logging_mixin.py:190} INFO - File berhasil ditambahkan
+[2024-12-04T12:21:52.779+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-04T12:21:52.786+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-04T12:21:52.786+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=process_and_insert_ekspor_impor, task_id=process_and_insert_data, run_id=manual__2024-12-04T12:21:51.083126+00:00, execution_date=20241204T122151, start_date=20241204T122152, end_date=20241204T122152
+[2024-12-04T12:21:52.794+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-04T12:21:52.794+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-04T12:21:52.794+0000] {logging_mixin.py:190} INFO - Dag name:process_and_insert_ekspor_impor queued_at:2024-12-04 12:21:51.090356+00:00
+[2024-12-04T12:21:52.794+0000] {logging_mixin.py:190} INFO - Task hostname:5ffa3ab6f14b operator:PythonOperator
+[2024-12-04T12:21:52.802+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-04T12:21:52.817+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-04T12:21:52.819+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

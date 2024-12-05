@@ -1,0 +1,25 @@
+[2024-12-04T02:28:23.960+0000] {processor.py:186} INFO - Started process (PID=1368) to work on /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:28:23.960+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/input/Ekspor_import.xlsx for tasks to queue
+[2024-12-04T02:28:23.962+0000] {logging_mixin.py:190} INFO - [2024-12-04T02:28:23.961+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:28:23.962+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:28:23.976+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/input/Ekspor_import.xlsx took 0.020 seconds
+[2024-12-04T02:28:54.203+0000] {processor.py:186} INFO - Started process (PID=1434) to work on /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:28:54.206+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/input/Ekspor_import.xlsx for tasks to queue
+[2024-12-04T02:28:54.208+0000] {logging_mixin.py:190} INFO - [2024-12-04T02:28:54.208+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:28:54.209+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:28:54.220+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/input/Ekspor_import.xlsx took 0.025 seconds
+[2024-12-04T02:29:24.531+0000] {processor.py:186} INFO - Started process (PID=1500) to work on /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:29:24.531+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/input/Ekspor_import.xlsx for tasks to queue
+[2024-12-04T02:29:24.532+0000] {logging_mixin.py:190} INFO - [2024-12-04T02:29:24.532+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:29:24.533+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:29:24.544+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/input/Ekspor_import.xlsx took 0.018 seconds
+[2024-12-04T02:29:55.385+0000] {processor.py:186} INFO - Started process (PID=1565) to work on /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:29:55.387+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/input/Ekspor_import.xlsx for tasks to queue
+[2024-12-04T02:29:55.389+0000] {logging_mixin.py:190} INFO - [2024-12-04T02:29:55.388+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:29:55.389+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:29:55.401+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/input/Ekspor_import.xlsx took 0.019 seconds
+[2024-12-04T02:30:25.672+0000] {processor.py:186} INFO - Started process (PID=1631) to work on /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:30:25.675+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/input/Ekspor_import.xlsx for tasks to queue
+[2024-12-04T02:30:25.677+0000] {logging_mixin.py:190} INFO - [2024-12-04T02:30:25.677+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:30:25.678+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/input/Ekspor_import.xlsx
+[2024-12-04T02:30:25.698+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/input/Ekspor_import.xlsx took 0.034 seconds

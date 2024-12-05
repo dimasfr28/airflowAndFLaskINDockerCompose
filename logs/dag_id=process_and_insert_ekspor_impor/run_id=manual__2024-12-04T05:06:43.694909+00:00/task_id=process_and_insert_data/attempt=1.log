@@ -1,0 +1,89 @@
+[2024-12-04T05:06:45.638+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-04T05:06:45.648+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_and_insert_ekspor_impor.process_and_insert_data manual__2024-12-04T05:06:43.694909+00:00 [queued]>
+[2024-12-04T05:06:45.652+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_and_insert_ekspor_impor.process_and_insert_data manual__2024-12-04T05:06:43.694909+00:00 [queued]>
+[2024-12-04T05:06:45.653+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-04T05:06:45.660+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_and_insert_data> on 2024-12-04 05:06:43.694909+00:00
+[2024-12-04T05:06:45.665+0000] {standard_task_runner.py:72} INFO - Started process 84 to run task
+[2024-12-04T05:06:45.668+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'process_and_insert_ekspor_impor', 'process_and_insert_data', 'manual__2024-12-04T05:06:43.694909+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/process_and_insert_ekspor_impor.py', '--cfg-path', '/tmp/tmp_d7n4vm6']
+[2024-12-04T05:06:45.668+0000] {standard_task_runner.py:105} INFO - Job 54: Subtask process_and_insert_data
+[2024-12-04T05:06:45.695+0000] {task_command.py:467} INFO - Running <TaskInstance: process_and_insert_ekspor_impor.process_and_insert_data manual__2024-12-04T05:06:43.694909+00:00 [running]> on host aa6cb19de75c
+[2024-12-04T05:06:45.751+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='process_and_insert_ekspor_impor' AIRFLOW_CTX_TASK_ID='process_and_insert_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-04T05:06:43.694909+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-04T05:06:43.694909+00:00'
+[2024-12-04T05:06:45.752+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-04T05:06:45.752+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-04T05:06:45.752+0000] {logging_mixin.py:190} INFO - Current task name:process_and_insert_data state:running start_date:2024-12-04 05:06:45.648934+00:00
+[2024-12-04T05:06:45.752+0000] {logging_mixin.py:190} INFO - Dag name:process_and_insert_ekspor_impor and current dag run status:running
+[2024-12-04T05:06:45.752+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-04T05:06:45.753+0000] {logging_mixin.py:190} INFO - Error terjadi: File Ekspor_import.xlsx tidak ditemukan di /opt/***/dags/input
+[2024-12-04T05:06:45.753+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/process_and_insert_ekspor_impor.py", line 92, in process_and_insert_data
+    raise e
+  File "/opt/airflow/dags/process_and_insert_ekspor_impor.py", line 49, in process_and_insert_data
+    raise FileNotFoundError(f'File {file_name} tidak ditemukan di {input_folder}')
+FileNotFoundError: File Ekspor_import.xlsx tidak ditemukan di /opt/***/dags/input
+[2024-12-04T05:06:45.761+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-12-04T05:06:45.761+0000] {logging_mixin.py:190} INFO - Task start:2024-12-04 05:06:45.648934+00:00 end:2024-12-04 05:06:45.760889+00:00 duration:0.111955
+[2024-12-04T05:06:45.761+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): process_and_insert_data> dag:<DAG: process_and_insert_ekspor_impor> dagrun:<DagRun process_and_insert_ekspor_impor @ 2024-12-04 05:06:43.694909+00:00: manual__2024-12-04T05:06:43.694909+00:00, state:running, queued_at: 2024-12-04 05:06:43.702226+00:00. externally triggered: True>
+[2024-12-04T05:06:45.761+0000] {logging_mixin.py:190} INFO - Failure caused by File Ekspor_import.xlsx tidak ditemukan di /opt/***/dags/input
+[2024-12-04T05:06:45.761+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=process_and_insert_ekspor_impor, task_id=process_and_insert_data, run_id=manual__2024-12-04T05:06:43.694909+00:00, execution_date=20241204T050643, start_date=20241204T050645, end_date=20241204T050645
+[2024-12-04T05:06:45.770+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-04T05:06:45.771+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 54 for task process_and_insert_data (File Ekspor_import.xlsx tidak ditemukan di /opt/***/dags/input; 84)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/process_and_insert_ekspor_impor.py", line 92, in process_and_insert_data
+    raise e
+  File "/opt/airflow/dags/process_and_insert_ekspor_impor.py", line 49, in process_and_insert_data
+    raise FileNotFoundError(f'File {file_name} tidak ditemukan di {input_folder}')
+FileNotFoundError: File Ekspor_import.xlsx tidak ditemukan di /opt/***/dags/input
+[2024-12-04T05:06:45.800+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-04T05:06:45.834+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-04T05:06:45.836+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
